@@ -622,4 +622,8 @@
     <!-- Show/Hide Search Bar -->
     <string name="recents_show_searchbar">Disable search bar in recents menu</string>
     <string name="recents_show_searchbar_summary">Disable or enable the search bar in the recents menu</string>
+
+    <!-- Bluetooth settings.  A checkbox to set if we should accept all the file types regardless of
+     their presence in MIME type whitelist -->
+    <string name="bluetooth_accept_all_files">Accept all file types</string>
 </resources>
