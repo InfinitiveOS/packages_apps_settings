@@ -80,4 +80,7 @@
     <color name="wifi_divider">#ffe0e0e0</color>
     <color name="sim_noitification">@*android:color/material_deep_teal_500</color>
 
+    <!-- Blacklist -->
+    <color name="floating_action_button_touch_tint">#80ffffff</color>
+
 </resources>
