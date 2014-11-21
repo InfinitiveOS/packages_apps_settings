@@ -699,4 +699,9 @@
     <string name="io_changelog_title">ChangeLog</string>
     <string name="io_changelog_summary">InfinitiveOS ChangeLog</string>
     <string name="io_changelog_error">ChangeLog could not be loaded!</string>
+
+    <!-- Status bar -->
+    <string name="status_bar_title">Status bar</string>
+    <string name="status_bar_toggle_brightness">Brightness control</string>
+    <string name="status_bar_toggle_brightness_summary">Adjust brightness by sliding across the status bar</string>
 </resources>
