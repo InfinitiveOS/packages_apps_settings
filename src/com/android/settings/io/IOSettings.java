@@ -78,8 +78,9 @@ public class IOSettings extends SettingsPreferenceFragment {
 
         public StatusBarAdapter(FragmentManager fm) {
             super(fm);
-            frags[0] = new NavigationBarSettings();
-            frags[1] = new About();
+            frags[0] = new StatusBarSettings();
+            frags[1] = new NavigationBarSettings();
+            frags[2] = new About();
         }
 
         @Override
@@ -101,6 +102,7 @@ public class IOSettings extends SettingsPreferenceFragment {
     private String[] getTitles() {
         String titleString[];
         titleString = new String[]{
+                    getString(R.string.status_bar_title),
                     getString(R.string.navigation_bar_title),
                     getString(R.string.about_io)};
         return titleString;

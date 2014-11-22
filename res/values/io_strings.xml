@@ -250,4 +250,12 @@
     <string name="recents_clear_all_location_right">Top right</string>
     <string name="recents_clear_all_location_left">Top left</string>
 
+    <!-- Status bar double-tap to sleep -->
+    <string name="status_bar_double_tap_to_sleep_title">Double-tap to sleep</string>
+    <string name="status_bar_double_tap_to_sleep_summary">Enable or disable to toggle double-tap to sleep on status bar</string>
+
+    <!-- Status bar-->
+    <string name="status_bar_general_category">General</string>
+    <string name="status_bar_title">Status bar</string>
+
 </resources>
