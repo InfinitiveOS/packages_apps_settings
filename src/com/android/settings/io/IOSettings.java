@@ -21,7 +21,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.android.settings.io.StatusBarSettings;
 import com.android.settings.io.NavigationBarSettings;
+import com.android.settings.io.QsSettings;
 import com.android.settings.io.About;
 
 import com.android.settings.R;
@@ -80,7 +82,8 @@ public class IOSettings extends SettingsPreferenceFragment {
             super(fm);
             frags[0] = new StatusBarSettings();
             frags[1] = new NavigationBarSettings();
-            frags[2] = new About();
+            frags[2] = new QsSettings();
+            frags[3] = new About();
         }
 
         @Override
@@ -104,6 +107,7 @@ public class IOSettings extends SettingsPreferenceFragment {
         titleString = new String[]{
                     getString(R.string.status_bar_title),
                     getString(R.string.navigation_bar_title),
+                    getString(R.string.qs_settings.xml),
                     getString(R.string.about_io)};
         return titleString;
     }
