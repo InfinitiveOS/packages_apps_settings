@@ -113,7 +113,7 @@
                 android:id="@+id/button_settings"
                 android:title="@string/button_pref_title"
                 android:fragment="com.android.settings.slim.HardwareKeysSettings"
-                android:icon="@drawable/ic_settings_home"
+                android:icon="@drawable/ic_settings_buttons"
                 />
 
         <!-- Storage -->
