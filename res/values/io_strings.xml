@@ -465,4 +465,8 @@
     <string name="adb_notify">USB debugging notify</string>
     <string name="adb_notify_summary">Display a notification when USB debugging is connected</string>
 
+    <!-- Devices and Maintainers -->
+    <string name="device_maintainers_title">Devices and Maintainers</string>
+    <string name="device_maintainers_title_summary">List of devices and their Infinitive OS ROM maintainers</string>
+
 </resources>
