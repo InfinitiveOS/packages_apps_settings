@@ -24,6 +24,7 @@ import android.view.ViewGroup;
 import com.android.settings.io.StatusBarSettings;
 import com.android.settings.io.NavigationBarSettings;
 import com.android.settings.io.QsSettings;
+import com.android.settings.io.PowerMenuActions;
 import com.android.settings.io.About;
 
 import com.android.settings.R;
@@ -83,7 +84,8 @@ public class IOSettings extends SettingsPreferenceFragment {
             frags[0] = new StatusBarSettings();
             frags[1] = new NavigationBarSettings();
             frags[2] = new QsSettings();
-            frags[3] = new About();
+            frags[3] = new PowerMenuActions();
+            frags[4] = new About();
         }
 
         @Override
@@ -108,6 +110,7 @@ public class IOSettings extends SettingsPreferenceFragment {
                     getString(R.string.status_bar_title),
                     getString(R.string.navigation_bar_title),
                     getString(R.string.qs_settings.xml),
+                    getString(R.string.power_menu_title),
                     getString(R.string.about_io)};
         return titleString;
     }
