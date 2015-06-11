@@ -99,6 +99,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     private static final String ENABLE_ADB = "enable_adb";
     private static final String ADB_TCPIP = "adb_over_network";
     private static final String CLEAR_ADB_KEYS = "clear_adb_keys";
+    private static final String ADB_NOTIFY = "adb_notify";
     private static final String ENABLE_TERMINAL = "enable_terminal";
     private static final String RESTART_SYSTEMUI = "restart_systemui";
     private static final String KEEP_SCREEN_ON = "keep_screen_on";
@@ -189,6 +190,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     private SwitchPreference mEnableAdb;
     private SwitchPreference mAdbOverNetwork;
     private Preference mClearAdbKeys;
+    private SwitchPreference mAdbNotify;
 
     private SwitchPreference mEnableTerminal;
     private Preference mRestartSystemUI;
@@ -285,6 +287,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         mEnableAdb = findAndInitSwitchPref(ENABLE_ADB);
         mAdbOverNetwork = findAndInitSwitchPref(ADB_TCPIP);
         mClearAdbKeys = findPreference(CLEAR_ADB_KEYS);
+        mAdbNotify = findAndInitSwitchPref(ADB_NOTIFY);
         if (!SystemProperties.getBoolean("ro.adb.secure", false)) {
             if (debugDebuggingCategory != null) {
                 debugDebuggingCategory.removePreference(mClearAdbKeys);
@@ -514,12 +517,9 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         mHaveDebugSettings = false;
         updateSwitchPreference(mEnableAdb, Settings.Global.getInt(cr,
                 Settings.Global.ADB_ENABLED, 0) != 0);
-<<<<<<< HEAD
-=======
         updateSwitchPreference(mAdbNotify, Settings.Global.getInt(cr,
                 Settings.Global.ADB_NOTIFY, 1) != 0);
         updateAdbOverNetwork();
->>>>>>> 1a8f723... [2/2] Custom QS
         if (mEnableTerminal != null) {
             updateSwitchPreference(mEnableTerminal,
                     context.getPackageManager().getApplicationEnabledSetting(TERMINAL_APP_PACKAGE)
@@ -1404,11 +1404,8 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
                 mVerifyAppsOverUsb.setEnabled(false);
                 mVerifyAppsOverUsb.setChecked(false);
             }
-<<<<<<< HEAD
-
         } else if (preference == mRestartSystemUI) {
-            Helpers.restartSystemUI(); 
-=======
+            Helpers.restartSystemUI();
         } else if (preference == mAdbOverNetwork) {
             if (mAdbOverNetwork.isChecked()) {
                 if (mAdbTcpDialog != null) {
@@ -1426,7 +1423,6 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
                         Settings.Secure.ADB_PORT, -1);
                 updateAdbOverNetwork();
             }
->>>>>>> 1a8f723... [2/2] Custom QS
         } else if (preference == mClearAdbKeys) {
             if (mAdbKeysDialog != null) dismissDialogs();
             mAdbKeysDialog = new AlertDialog.Builder(getActivity())
@@ -1434,6 +1430,10 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
                         .setPositiveButton(android.R.string.ok, this)
                         .setNegativeButton(android.R.string.cancel, null)
                         .show();
+        } else if (preference == mAdbNotify) {
+            Settings.Global.putInt(getActivity().getContentResolver(),
+                    Settings.Global.ADB_NOTIFY,
+                    mAdbNotify.isChecked() ? 1 : 0);
         } else if (preference == mEnableTerminal) {
             final PackageManager pm = getActivity().getPackageManager();
             pm.setApplicationEnabledSetting(TERMINAL_APP_PACKAGE,

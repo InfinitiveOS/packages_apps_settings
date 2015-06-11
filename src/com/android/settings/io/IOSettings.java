@@ -109,7 +109,7 @@ public class IOSettings extends SettingsPreferenceFragment {
         titleString = new String[]{
                     getString(R.string.status_bar_title),
                     getString(R.string.navigation_bar_title),
-                    getString(R.string.qs_settings.xml),
+                    getString(R.string.title_qs_tiles),
                     getString(R.string.power_menu_title),
                     getString(R.string.about_io)};
         return titleString;
