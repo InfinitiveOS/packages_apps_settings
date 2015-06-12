@@ -241,6 +241,8 @@
     <string name="io_gerrit_summary">Visit our Gerrit Code Review</string>
     <string name="io_google_plus_title">Google+ Community</string>
     <string name="io_google_plus_summary">Visit our G+ Community for support and latest news</string>
+    <string name="io_download_title">InfinitiveOS Downloads</string>
+    <string name="io_download_summary">Download InfinitiveOS from our Sourceforge</string>
  
     <!-- Restart SystemUI -->
     <string name="restart_systemui">Restart SystemUI</string>
