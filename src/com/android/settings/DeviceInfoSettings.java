@@ -250,6 +250,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
             }
         } else if (preference.getKey().equals(KEY_DEVICE_FEEDBACK)) {
             sendFeedback();
+        }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 
@@ -530,4 +531,3 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
         }
     }
 }
-
