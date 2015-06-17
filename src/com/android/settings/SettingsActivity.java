@@ -303,6 +303,7 @@ public class SettingsActivity extends Activity
             AppNotificationSettings.class.getName(),
             OtherSoundSettings.class.getName(),
             QuickLaunchSettings.class.getName(),
+            ApnSettings.class.getName(),
             BlacklistSettings.class.getName()
     };
 
