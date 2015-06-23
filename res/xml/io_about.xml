@@ -54,6 +54,14 @@
                 android:title="@string/device_maintainers_title"
                 android:fragment="com.android.settings.io.Devices" />
 
+        <!-- InfinitiveOS ChangeLog -->
+
+	    <PreferenceScreen 
+		    android:key="changelog_io"
+                    android:title="@string/io_changelog_title"
+                    android:summary="@string/io_changelog_summary"
+                    android:fragment="com.android.settings.io.ChangeLog" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>
