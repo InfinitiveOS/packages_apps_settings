@@ -21,7 +21,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.android.settings.io.StatusBarSettings;
+import com.android.settings.cyanogenmod.StatusBarSettings;
 import com.android.settings.io.NavigationBarSettings;
 import com.android.settings.io.QsSettings;
 import com.android.settings.io.PowerMenuActions;
